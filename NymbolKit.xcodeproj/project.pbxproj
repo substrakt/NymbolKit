@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D879E3319755943005EB394 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D879E3219755943005EB394 /* Foundation.framework */; };
+		4D879E3819755943005EB394 /* NymbolKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D879E3719755943005EB394 /* NymbolKit.h */; };
+		4D879E3A19755943005EB394 /* NymbolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879E3919755943005EB394 /* NymbolKit.m */; };
+		4D879E4119755943005EB394 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D879E4019755943005EB394 /* XCTest.framework */; };
+		4D879E4219755943005EB394 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D879E3219755943005EB394 /* Foundation.framework */; };
+		4D879E4419755943005EB394 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D879E4319755943005EB394 /* UIKit.framework */; };
+		4D879E4719755943005EB394 /* libNymbolKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D879E2F19755943005EB394 /* libNymbolKit.a */; };
+		4D879E4D19755943005EB394 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D879E4B19755943005EB394 /* InfoPlist.strings */; };
+		4D879E4F19755943005EB394 /* NymbolKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879E4E19755943005EB394 /* NymbolKitTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D879E4519755943005EB394 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D879E2719755943005EB394 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D879E2E19755943005EB394;
+			remoteInfo = NymbolKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D879E2D19755943005EB394 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				4D879E3819755943005EB394 /* NymbolKit.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4D879E2F19755943005EB394 /* libNymbolKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNymbolKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D879E3219755943005EB394 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4D879E3619755943005EB394 /* NymbolKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NymbolKit-Prefix.pch"; sourceTree = "<group>"; };
+		4D879E3719755943005EB394 /* NymbolKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NymbolKit.h; sourceTree = "<group>"; };
+		4D879E3919755943005EB394 /* NymbolKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NymbolKit.m; sourceTree = "<group>"; };
+		4D879E3F19755943005EB394 /* NymbolKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NymbolKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D879E4019755943005EB394 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4D879E4319755943005EB394 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4D879E4A19755943005EB394 /* NymbolKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NymbolKitTests-Info.plist"; sourceTree = "<group>"; };
+		4D879E4C19755943005EB394 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4D879E4E19755943005EB394 /* NymbolKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NymbolKitTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D879E2C19755943005EB394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D879E3319755943005EB394 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D879E3C19755943005EB394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D879E4119755943005EB394 /* XCTest.framework in Frameworks */,
+				4D879E4719755943005EB394 /* libNymbolKit.a in Frameworks */,
+				4D879E4419755943005EB394 /* UIKit.framework in Frameworks */,
+				4D879E4219755943005EB394 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D879E2619755943005EB394 = {
+			isa = PBXGroup;
+			children = (
+				4D879E3419755943005EB394 /* NymbolKit */,
+				4D879E4819755943005EB394 /* NymbolKitTests */,
+				4D879E3119755943005EB394 /* Frameworks */,
+				4D879E3019755943005EB394 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4D879E3019755943005EB394 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D879E2F19755943005EB394 /* libNymbolKit.a */,
+				4D879E3F19755943005EB394 /* NymbolKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D879E3119755943005EB394 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D879E3219755943005EB394 /* Foundation.framework */,
+				4D879E4019755943005EB394 /* XCTest.framework */,
+				4D879E4319755943005EB394 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D879E3419755943005EB394 /* NymbolKit */ = {
+			isa = PBXGroup;
+			children = (
+				4D879E3719755943005EB394 /* NymbolKit.h */,
+				4D879E3919755943005EB394 /* NymbolKit.m */,
+				4D879E3519755943005EB394 /* Supporting Files */,
+			);
+			path = NymbolKit;
+			sourceTree = "<group>";
+		};
+		4D879E3519755943005EB394 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D879E3619755943005EB394 /* NymbolKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4D879E4819755943005EB394 /* NymbolKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D879E4E19755943005EB394 /* NymbolKitTests.m */,
+				4D879E4919755943005EB394 /* Supporting Files */,
+			);
+			path = NymbolKitTests;
+			sourceTree = "<group>";
+		};
+		4D879E4919755943005EB394 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D879E4A19755943005EB394 /* NymbolKitTests-Info.plist */,
+				4D879E4B19755943005EB394 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D879E2E19755943005EB394 /* NymbolKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D879E5219755943005EB394 /* Build configuration list for PBXNativeTarget "NymbolKit" */;
+			buildPhases = (
+				4D879E2B19755943005EB394 /* Sources */,
+				4D879E2C19755943005EB394 /* Frameworks */,
+				4D879E2D19755943005EB394 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NymbolKit;
+			productName = NymbolKit;
+			productReference = 4D879E2F19755943005EB394 /* libNymbolKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4D879E3E19755943005EB394 /* NymbolKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D879E5519755943005EB394 /* Build configuration list for PBXNativeTarget "NymbolKitTests" */;
+			buildPhases = (
+				4D879E3B19755943005EB394 /* Sources */,
+				4D879E3C19755943005EB394 /* Frameworks */,
+				4D879E3D19755943005EB394 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D879E4619755943005EB394 /* PBXTargetDependency */,
+			);
+			name = NymbolKitTests;
+			productName = NymbolKitTests;
+			productReference = 4D879E3F19755943005EB394 /* NymbolKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D879E2719755943005EB394 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Substrakt;
+			};
+			buildConfigurationList = 4D879E2A19755943005EB394 /* Build configuration list for PBXProject "NymbolKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4D879E2619755943005EB394;
+			productRefGroup = 4D879E3019755943005EB394 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D879E2E19755943005EB394 /* NymbolKit */,
+				4D879E3E19755943005EB394 /* NymbolKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D879E3D19755943005EB394 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D879E4D19755943005EB394 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D879E2B19755943005EB394 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D879E3A19755943005EB394 /* NymbolKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D879E3B19755943005EB394 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D879E4F19755943005EB394 /* NymbolKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D879E4619755943005EB394 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D879E2E19755943005EB394 /* NymbolKit */;
+			targetProxy = 4D879E4519755943005EB394 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4D879E4B19755943005EB394 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D879E4C19755943005EB394 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D879E5019755943005EB394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4D879E5119755943005EB394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D879E5319755943005EB394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/NymbolKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NymbolKit/NymbolKit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4D879E5419755943005EB394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/NymbolKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NymbolKit/NymbolKit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4D879E5619755943005EB394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NymbolKit/NymbolKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NymbolKitTests/NymbolKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4D879E5719755943005EB394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NymbolKit/NymbolKit-Prefix.pch";
+				INFOPLIST_FILE = "NymbolKitTests/NymbolKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D879E2A19755943005EB394 /* Build configuration list for PBXProject "NymbolKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D879E5019755943005EB394 /* Debug */,
+				4D879E5119755943005EB394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D879E5219755943005EB394 /* Build configuration list for PBXNativeTarget "NymbolKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D879E5319755943005EB394 /* Debug */,
+				4D879E5419755943005EB394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4D879E5519755943005EB394 /* Build configuration list for PBXNativeTarget "NymbolKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D879E5619755943005EB394 /* Debug */,
+				4D879E5719755943005EB394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4D879E2719755943005EB394 /* Project object */;
+}
