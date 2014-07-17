@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "08D8F13E62AA4972A99B4130"
-               BuildableName = "libPods-NymbolKitTests-Kiwi.a"
-               BlueprintName = "Pods-NymbolKitTests-Kiwi"
+               BlueprintIdentifier = "B88FEE6DDD6E4929B77A102A"
+               BuildableName = "libPods-CocoaSecurity.a"
+               BlueprintName = "Pods-CocoaSecurity"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

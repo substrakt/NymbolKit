@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6CF4E81FCD794467879D46D1"
+               BlueprintIdentifier = "794DA3DFA6904755BADD4A4B"
                BuildableName = "libPods-NymbolKitTests.a"
                BlueprintName = "Pods-NymbolKitTests"
                ReferencedContainer = "container:Pods.xcodeproj">

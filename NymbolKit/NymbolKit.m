@@ -1,11 +1,3 @@
-//
-//  NymbolKit.m
-//  NymbolKit
-//
-//  Created by Max Woolf on 15/07/2014.
-//  Copyright (c) 2014 Substrakt. All rights reserved.
-//
-
 #import "NymbolKit.h"
 
 @implementation NymbolKit
@@ -18,12 +10,18 @@
 
 + (NSString *)currentKey
 {
-    return @"";
+    return [[NSUserDefaults standardUserDefaults] valueForKey:@"nymbol_key"];
 }
 
 + (NSString *)currentSecret
 {
-    return @"";
+    return [[NSUserDefaults standardUserDefaults] valueForKey:@"nymbol_secret"];
+}
+
++ (NSString *)authHeaderKey
+{
+    NSString *authString = [NSString stringWithFormat:@"%@:%@", [NymbolKit currentKey], [NymbolKit currentSecret]];
+    return [[CocoaSecurity md5:authString] hexLower];
 }
 
 @end

@@ -19,6 +19,10 @@ describe(@"The login manager", ^{
             [[[NymbolKit currentKey] should] equal:@"abcd"];
             [[[NymbolKit currentSecret] should] equal:@"abcd"];
         });
+        
+        it(@"should provide an authorization header key", ^{
+            [[[NymbolKit authHeaderKey] should] equal:@"91f317c9c7c8b107a486b2296c2f0e2c"];
+        });
     });
     context(@"when a valid key and secret are inputted", ^{
         xit(@"should return a valid result.", ^{

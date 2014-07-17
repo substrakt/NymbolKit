@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "CocoaSecurity.h"
 
 /**
  *  Base class used for authentication
@@ -28,5 +29,12 @@
  *  @return The current secret API key
  */
 + (NSString *)currentSecret;
+
+/**
+ *  Returns the authorization key to use in the request headers
+ *
+ *  @return The MD5 string required for authorization
+ */
++ (NSString *)authHeaderKey;
 
 @end
