@@ -1,34 +1,36 @@
-//
-//  NymbolKitTests.m
-//  NymbolKitTests
-//
-//  Created by Max Woolf on 15/07/2014.
-//  Copyright (c) 2014 Substrakt. All rights reserved.
-//
+#import "Kiwi.h"
+#import "NymbolKit.h"
 
-#import <XCTest/XCTest.h>
+SPEC_BEGIN(NymbolKitSpec)
 
-@interface NymbolKitTests : XCTestCase
+describe(@"The login manager", ^{
+    
+    context(@"when any key and secret are inputted", ^{
+        beforeEach(^{
+            [NymbolKit initializeSessionWithKey:@"abcd" secretKey:@"abcd"];
+        });
+        
+        it(@"should store them in NSUserDefaults", ^{
+            [[[[NSUserDefaults standardUserDefaults] valueForKey:@"nymbol_key"] should] equal:@"abcd"];
+            [[[[NSUserDefaults standardUserDefaults] valueForKey:@"nymbol_secret"] should] equal:@"abcd"];
+        });
+        
+        it(@"should be available using getter methods", ^{
+            [[[NymbolKit currentKey] should] equal:@"abcd"];
+            [[[NymbolKit currentSecret] should] equal:@"abcd"];
+        });
+    });
+    context(@"when a valid key and secret are inputted", ^{
+        xit(@"should return a valid result.", ^{
+            
+        });
+    });
+    
+    context(@"when an invalid key or secret are inputted", ^{
+        xit(@"should raise an exception", ^{
+            
+        });
+    });
+});
 
-@end
-
-@implementation NymbolKitTests
-
-- (void)setUp
-{
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
-
-@end
+SPEC_END

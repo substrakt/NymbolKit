@@ -1,13 +1,32 @@
-//
-//  NymbolKit.h
-//  NymbolKit
-//
-//  Created by Max Woolf on 15/07/2014.
-//  Copyright (c) 2014 Substrakt. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
+/**
+ *  Base class used for authentication
+ */
 @interface NymbolKit : NSObject
+
+/**
+ *  Method to be called before any Nymbol API calls can be made.
+ *  It stores the key and secret key in the NSUserDefaults to be used later.
+ *
+ *  @param key       The key from your Nymbol dashboard
+ *  @param secretKey The secret key from your Nymbol dashboard
+ */
++ (void)initializeSessionWithKey:(NSString *)key secretKey:(NSString *)secretKey;
+
+
+/**
+ *  Returns the currently used API key
+ *
+ *  @return The API key
+ */
++ (NSString *)currentKey;
+
+/**
+ *  Returns the currently used secret
+ *
+ *  @return The current secret API key
+ */
++ (NSString *)currentSecret;
 
 @end

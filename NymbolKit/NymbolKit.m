@@ -10,4 +10,20 @@
 
 @implementation NymbolKit
 
++ (void)initializeSessionWithKey:(NSString *)key secretKey:(NSString *)secretKey
+{
+    [[NSUserDefaults standardUserDefaults] setValue:key forKey:@"nymbol_key"];
+    [[NSUserDefaults standardUserDefaults] setValue:secretKey forKey:@"nymbol_secret"];
+}
+
++ (NSString *)currentKey
+{
+    return @"";
+}
+
++ (NSString *)currentSecret
+{
+    return @"";
+}
+
 @end
