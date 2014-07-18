@@ -84,7 +84,7 @@ describe(@"Fetching all collections", ^{
             withHeaders(@{ @"Authorization": [NymbolKit authHeaderKey] }).
             andReturn(200).
             withHeaders(@{@"Content-Type": @"application/json"}).
-            withBody(@"[{\"id\": 43, \"name\": \"Game of Thrones Characters\", \"uid\": \"8E91\"}]");
+            withBody(@"[{\"id\": 43, \"name\": \"Game of Thrones Characters\", \"uid\": \"8E91\", \"location\": \"Steve\"}]");
         });
 
         it(@"should give an NSArray of NYMCollection objects.", ^{

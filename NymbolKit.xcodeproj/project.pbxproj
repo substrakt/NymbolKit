@@ -20,6 +20,7 @@
 		4D8ACFCB19790E3700A1E7BE /* NYMCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8ACFCA19790E3700A1E7BE /* NYMCollectionTests.m */; };
 		4D8ACFCF19792AAA00A1E7BE /* NYMObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8ACFCE19792AAA00A1E7BE /* NYMObject.m */; };
 		4D8ACFD119792ABA00A1E7BE /* NYMObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8ACFD019792ABA00A1E7BE /* NYMObjectTests.m */; };
+		4DF0321D19796BFD00C6F4CB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF0321C19796BFD00C6F4CB /* CoreLocation.framework */; };
 		C0F6A8CE59484FD08CFBC3D0 /* libPods-NymbolKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D057A56D7EE423A99B451E9 /* libPods-NymbolKitTests.a */; };
 		ED590039C8F0477482E95592 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5E8E8AA86244C29714B071 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,7 @@
 		4D8ACFCD19792AAA00A1E7BE /* NYMObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYMObject.h; sourceTree = "<group>"; };
 		4D8ACFCE19792AAA00A1E7BE /* NYMObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMObject.m; sourceTree = "<group>"; };
 		4D8ACFD019792ABA00A1E7BE /* NYMObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMObjectTests.m; sourceTree = "<group>"; };
+		4DF0321C19796BFD00C6F4CB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4E5E8E8AA86244C29714B071 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		76256E6D0BBE41D9A8F87CD0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DF0321D19796BFD00C6F4CB /* CoreLocation.framework in Frameworks */,
 				4D879E3319755943005EB394 /* Foundation.framework in Frameworks */,
 				ED590039C8F0477482E95592 /* libPods.a in Frameworks */,
 			);
@@ -122,6 +125,7 @@
 		4D879E3119755943005EB394 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DF0321C19796BFD00C6F4CB /* CoreLocation.framework */,
 				4D879E3219755943005EB394 /* Foundation.framework */,
 				4D879E4019755943005EB394 /* XCTest.framework */,
 				4D879E4319755943005EB394 /* UIKit.framework */,

@@ -16,7 +16,6 @@
             NSMutableArray *collections = [[NSMutableArray alloc] init];
             for (NSDictionary *collection in responseObject) {
                 NYMCollection *newCollection = [NYMCollection new];
-                NSLog(@"%@", collection[@"name"]);
                 newCollection.name = collection[@"name"];
                 newCollection.uid = collection[@"uid"];
                 newCollection.pk = collection[@"pk"];
@@ -67,7 +66,11 @@
                 for (NSDictionary *object in responseObject) {
                     NYMObject *newObject = [NYMObject new];
                     newObject.name = object[@"name"];
+                    newObject.status = (int)object[@"status"];
+                    newObject.location = CLLocationCoordinate2DMake([object[@"latitude"] doubleValue], [object[@"longitude"] doubleValue]);
+                    newObject.description = object[@"description"];
                     [assets addObject:newObject];
+                    
                 }
                 self.objects = assets;
                 block(assets, nil);

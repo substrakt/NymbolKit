@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface NYMObject : NSObject
 
 @property (nonatomic) NSString *name;
-
+@property (nonatomic) int status;
+@property (nonatomic) int curator;
+@property (nonatomic) CLLocationCoordinate2D location;
+@property (nonatomic) NSString *description;
 @end

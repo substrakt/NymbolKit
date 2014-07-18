@@ -35,4 +35,5 @@
  *  @param block Completion block when done.
  */
 - (void)fetchObjectsIfNeededWithBlock:(void (^)(NSArray *objects, NSError *error))block;
+
 @end
