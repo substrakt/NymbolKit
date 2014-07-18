@@ -37,11 +37,15 @@ describe(@"Fetching all collections", ^{
             stubRequest(@"GET", @"http://nymbol.co.uk/api/manager/collection.json").
             andReturn(403);
             NSError __block *parentError = nil;
+            NSArray __block *parentCollections = nil;
+
             [NYMCollection allCollectionsWithBlock:^(NSArray *collections, NSError *error) {
                 parentError = error;
+                parentCollections = collections;
             }];
             [[expectFutureValue(parentError) shouldEventually] beKindOfClass:[NSError class]];
             [[expectFutureValue(parentError) shouldNotEventually] beNil];
+            [[expectFutureValue(parentCollections) shouldEventually] beNil];
         });
     });
     

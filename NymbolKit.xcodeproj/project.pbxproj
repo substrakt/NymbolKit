@@ -62,6 +62,7 @@
 		4D8ACFC719790E2100A1E7BE /* NYMCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYMCollection.h; sourceTree = "<group>"; };
 		4D8ACFC819790E2100A1E7BE /* NYMCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMCollection.m; sourceTree = "<group>"; };
 		4D8ACFCA19790E3700A1E7BE /* NYMCollectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMCollectionTests.m; sourceTree = "<group>"; };
+		4D8ACFCC1979247900A1E7BE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		4E5E8E8AA86244C29714B071 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		76256E6D0BBE41D9A8F87CD0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +95,7 @@
 		4D879E2619755943005EB394 = {
 			isa = PBXGroup;
 			children = (
+				4D8ACFCC1979247900A1E7BE /* README.md */,
 				4D879E3419755943005EB394 /* NymbolKit */,
 				4D879E4819755943005EB394 /* NymbolKitTests */,
 				4D879E3119755943005EB394 /* Frameworks */,

@@ -15,7 +15,7 @@
         [manager GET:@"http://nymbol.co.uk/api/manager/collection.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSLog(@"JSON: %@", responseObject);
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            block(@[], error);
+            block(nil, error);
         }];
     });
 }
