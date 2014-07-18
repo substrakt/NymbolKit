@@ -55,23 +55,27 @@
 {
     dispatch_queue_t queue = dispatch_queue_create("nymbolkit_fetchObjects", nil);
     dispatch_async(queue, ^{
-        NSURLRequest *request = [NymbolKit baseRequestWithEndpoint:[NSString stringWithFormat:@"collection/%@/assets", self.pk]];
-        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-        operation.responseSerializer = [AFJSONResponseSerializer serializer];
-        
-        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSMutableArray *assets = [[NSMutableArray alloc] init];
-            for (NSDictionary *object in responseObject) {
-                NYMObject *newObject = [NYMObject new];
-                
-                // TODO: Set attributes
-                [assets addObject:newObject];
-            }
-            block(assets, nil);
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            block(nil, error);
-        }];
-        [operation start];
+        if ([self.objects count] > 0) {
+            block(self.objects, nil);
+        } else {
+            NSURLRequest *request = [NymbolKit baseRequestWithEndpoint:[NSString stringWithFormat:@"collection/%@/assets", self.pk]];
+            AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+            operation.responseSerializer = [AFJSONResponseSerializer serializer];
+            
+            [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+                NSMutableArray *assets = [[NSMutableArray alloc] init];
+                for (NSDictionary *object in responseObject) {
+                    NYMObject *newObject = [NYMObject new];
+                    newObject.name = object[@"name"];
+                    [assets addObject:newObject];
+                }
+                self.objects = assets;
+                block(assets, nil);
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                block(nil, error);
+            }];
+            [operation start];
+        }
     });
 }
 

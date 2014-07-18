@@ -27,5 +27,12 @@
 + (void)collectionWithUID:(NSString *)uid block:(void (^)(NYMCollection *collection, NSError *error))block;
 
 
+/**
+ *  Get all associated objects belonging to this collection
+ *  and store them in the objects attribute.
+ *  This either queries the API or pulls from a cache if exists.
+ *
+ *  @param block Completion block when done.
+ */
 - (void)fetchObjectsIfNeededWithBlock:(void (^)(NSArray *objects, NSError *error))block;
 @end

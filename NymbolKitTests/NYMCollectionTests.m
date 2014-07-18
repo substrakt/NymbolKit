@@ -57,7 +57,7 @@ describe(@"Fetchng a single collection by UID", ^{
             stubRequest(@"GET", @"http://nymbol.co.uk/api/manager/collection/43/assets.json").
             andReturn(200).
             withHeaders(@{@"Content-Type": @"application/json"}).
-            withBody(@"[{\"id\": 3}]");
+            withBody(@"[{\"status\": 1, \"rating\": 3, \"name\": \"Statue of Ned Stark\"}]");
             NSError __block *parentError = nil;
             NYMCollection __block *parentCollections = nil;
             NSArray __block *assets;
@@ -70,6 +70,7 @@ describe(@"Fetchng a single collection by UID", ^{
             }];
             
             [[expectFutureValue(assets) shouldEventually] beNonNil];
+            [[expectFutureValue([[assets objectAtIndex:0] name]) shouldEventually] equal:@"Statue of Ned Stark"];
         });
     });
 });

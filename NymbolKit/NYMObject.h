@@ -11,4 +11,5 @@
 @interface NYMObject : NSObject
 
 @property (nonatomic) NSString *name;
+
 @end
