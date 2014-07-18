@@ -30,4 +30,25 @@
     });
 }
 
++ (void)collectionWithUID:(NSString *)uid block:(void (^)(NYMCollection *, NSError *))block
+{
+    dispatch_queue_t queue = dispatch_queue_create("nymbolkit_allCollections", nil);
+    dispatch_async(queue, ^{
+        NSURLRequest *request = [NymbolKit baseRequestWithEndpoint:[NSString stringWithFormat:@"collection/%@", uid]];
+        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+        operation.responseSerializer = [AFJSONResponseSerializer serializer];
+        
+        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NYMCollection *newCollection = [NYMCollection new];
+            newCollection.name = responseObject[@"name"];
+            newCollection.uid = responseObject[@"uid"];
+            newCollection.pk = responseObject[@"pk"];
+            block(newCollection, nil);
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            block(nil, error);
+        }];
+        [operation start];
+    });
+}
+
 @end

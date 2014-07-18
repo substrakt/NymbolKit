@@ -18,6 +18,12 @@
  */
 + (void)allCollectionsWithBlock:(void (^)(NSArray *collections, NSError *error))block;
 
-
+/**
+ *  Fetch one collection asyncronously
+ *
+ *  @param block Completion block to run after fetching collections.
+ *  One or other of collections or error will be populated on completion.
+ */
++ (void)collectionWithUID:(NSString *)uid block:(void (^)(NYMCollection *collection, NSError *error))block;
 
 @end
