@@ -17,5 +17,6 @@ Pod::Spec.new do |s|
   
 # Pod Dependencies
   s.dependencies =	pod 'Kiwi'
+  s.dependencies =      pod 'AFNetworking'
 
 end
