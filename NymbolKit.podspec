@@ -5,8 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'http://substrakt.com'
   s.authors      =  'Max Woolf' => 'max@substrakt.com'
   s.summary      = 'Objective-C wrapper around Nymbol'
-  spec.source = { :git => 'git@github.com:substrakt/NymbolKit.git,
-                :tag => 'master' }
+  spec.source = { :git => 'git@github.com:substrakt/NymbolKit.git', :tag => 'master' }
 
 # Source Info
   s.platform     =  :ios, '7.0'
