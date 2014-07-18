@@ -26,4 +26,6 @@
  */
 + (void)collectionWithUID:(NSString *)uid block:(void (^)(NYMCollection *collection, NSError *error))block;
 
+
+- (void)fetchObjectsIfNeededWithBlock:(void (^)(NSArray *objects, NSError *error))block;
 @end

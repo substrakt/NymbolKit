@@ -14,9 +14,6 @@ afterAll(^{
 afterEach(^{
     [[LSNocilla sharedInstance] clearStubs];
 });
-beforeEach(^{
-    [NymbolKit initializeSessionWithKey:@"thisisinvalid" secretKey:@"soisthis"];
-});
 
 describe(@"Fetchng a single collection by UID", ^{
     
@@ -25,7 +22,7 @@ describe(@"Fetchng a single collection by UID", ^{
         beforeEach(^{
             [NymbolKit initializeSessionWithKey:@"NsgWPgQ5RXVh67NjX2" secretKey:@"J4zakHEFs89yeE29WeR6KbJZncuLtXZP"];
             stubRequest(@"GET", @"http://nymbol.co.uk/api/manager/collection/8E91.json").
-            withHeaders(@{ @"Authorization": @"084fd67c31f251946091d6c7923372a0" }).
+            withHeaders(@{ @"Authorization": [NymbolKit authHeaderKey] }).
             andReturn(200).
             withHeaders(@{@"Content-Type": @"application/json"}).
             withBody(@"{\"id\": 43, \"name\": \"Game of Thrones Characters\", \"uid\": \"8E91\"}");
@@ -43,8 +40,38 @@ describe(@"Fetchng a single collection by UID", ^{
             [[expectFutureValue(parentError) shouldEventually] beNil];
             [[expectFutureValue([parentCollections name]) shouldEventually] equal:@"Game of Thrones Characters"];
         });
+        
+        it(@"should have an nil array of objects", ^{
+            NSError __block *parentError = nil;
+            NYMCollection __block *parentCollections = nil;
+            [NYMCollection collectionWithUID:@"8E91" block:^(NYMCollection *collection, NSError *error) {
+                parentError = error;
+                parentCollections = collection;
+            }];
+            
+            [[expectFutureValue([parentCollections objects]) shouldEventually] beNil];
+        });
+        
+        
+        it(@"should fetch a bunch of objects.", ^{
+            stubRequest(@"GET", @"http://nymbol.co.uk/api/manager/collection/43/assets.json").
+            andReturn(200).
+            withHeaders(@{@"Content-Type": @"application/json"}).
+            withBody(@"[{\"id\": 3}]");
+            NSError __block *parentError = nil;
+            NYMCollection __block *parentCollections = nil;
+            NSArray __block *assets;
+            [NYMCollection collectionWithUID:@"8E91" block:^(NYMCollection *collection, NSError *error) {
+                parentError = error;
+                parentCollections = collection;
+                [collection fetchObjectsIfNeededWithBlock:^(NSArray *objects, NSError *error) {
+                    assets = objects;
+                }];
+            }];
+            
+            [[expectFutureValue(assets) shouldEventually] beNonNil];
+        });
     });
-    
 });
 
 describe(@"Fetching all collections", ^{
@@ -53,7 +80,7 @@ describe(@"Fetching all collections", ^{
         beforeEach(^{
             [NymbolKit initializeSessionWithKey:@"NsgWPgQ5RXVh67NjX2" secretKey:@"J4zakHEFs89yeE29WeR6KbJZncuLtXZP"];
             stubRequest(@"GET", @"http://nymbol.co.uk/api/manager/collection.json").
-            withHeaders(@{ @"Authorization": @"084fd67c31f251946091d6c7923372a0" }).
+            withHeaders(@{ @"Authorization": [NymbolKit authHeaderKey] }).
             andReturn(200).
             withHeaders(@{@"Content-Type": @"application/json"}).
             withBody(@"[{\"id\": 43, \"name\": \"Game of Thrones Characters\", \"uid\": \"8E91\"}]");
