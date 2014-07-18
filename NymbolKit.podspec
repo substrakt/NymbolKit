@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 
 # Source Info
   s.platform     =  :ios, '7.0'
-  s.source_files = 'NymbolKit/**'
+  s.source_files = 'NymbolKit', 'NymbolKit/**'
 
   s.requires_arc = true
   s.framework    = 'CoreLocation'
