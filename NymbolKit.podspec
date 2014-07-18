@@ -17,5 +17,7 @@ Pod::Spec.new do |s|
 # Pod Dependencies
   s.dependency 'Kiwi'
   s.dependency 'AFNetworking'
+  s.dependency 'CocoaSecurity'
+  
 
 end
