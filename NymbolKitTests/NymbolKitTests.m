@@ -24,17 +24,7 @@ describe(@"The login manager", ^{
             [[[NymbolKit authHeaderKey] should] equal:@"91f317c9c7c8b107a486b2296c2f0e2c"];
         });
     });
-    context(@"when a valid key and secret are inputted", ^{
-        xit(@"should return a valid result.", ^{
-            
-        });
-    });
-    
-    context(@"when an invalid key or secret are inputted", ^{
-        xit(@"should raise an exception", ^{
-            
-        });
-    });
+
 });
 
 SPEC_END

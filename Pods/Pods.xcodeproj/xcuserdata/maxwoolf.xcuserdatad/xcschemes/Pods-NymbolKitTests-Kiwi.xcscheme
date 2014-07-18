@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "08D8F13E62AA4972A99B4130"
+               BlueprintIdentifier = "C8D26EFC8DD248818C52C0BF"
                BuildableName = "libPods-NymbolKitTests-Kiwi.a"
                BlueprintName = "Pods-NymbolKitTests-Kiwi"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-CocoaSecurity.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Nocilla.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>08D8F13E62AA4972A99B4130</key>
+		<key>07599DF40FC24D21A87A88E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7462A9632B6B419BB6619C88</key>
+		<key>0B50BB75E64F4FFFA7D3E6E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>794DA3DFA6904755BADD4A4B</key>
+		<key>10DE6F9EE4C4414B9DE7E993</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B88FEE6DDD6E4929B77A102A</key>
+		<key>63AB5CE9B4D940A8B8EA4BA1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD09AAB7A29B4B489D21271E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C8D26EFC8DD248818C52C0BF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
