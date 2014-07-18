@@ -24,4 +24,15 @@
     return [[CocoaSecurity md5:authString] hexLower];
 }
 
++ (NSURLRequest *)baseRequestWithEndpoint:(NSString *)endpoint
+{
+    NSString *urlString = [NSString stringWithFormat:@"http://nymbol.co.uk/api/manager/%@.json", endpoint];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+    [request setValue:[NymbolKit authHeaderKey] forHTTPHeaderField:@"Authorization"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"testdeicive238938" forHTTPHeaderField:@"X-Device"];
+    [request setValue:@"ios" forHTTPHeaderField:@"X-Platform"];
+    return request;
+}
+
 @end

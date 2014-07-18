@@ -37,4 +37,6 @@
  */
 + (NSString *)authHeaderKey;
 
++ (NSURLRequest *)baseRequestWithEndpoint:(NSString *)endpoint;;
+
 @end
