@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
   s.dependency 'Kiwi'
   s.dependency 'AFNetworking'
   s.dependency 'CocoaSecurity'
-  
+  s.dependency 'Nocilla'
 
 end
