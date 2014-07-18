@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = 'NymbolKit'
   s.version      = '0.1'
-  s.license      =  :type => 'MIT'
+  s.license      =  { :type => 'MIT' }
   s.homepage     = 'http://substrakt.com'
-  s.authors      =  'Max Woolf' => 'max@substrakt.com'
+  s.authors      =  { 'Max Woolf' => 'max@substrakt.com' }
   s.summary      = 'Objective-C wrapper around Nymbol'
   spec.source = { :git => 'git@github.com:substrakt/NymbolKit.git', :tag => 'master' }
 
