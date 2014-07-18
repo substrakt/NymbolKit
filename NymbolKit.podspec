@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.framework    = 'CoreLocation'
   
 # Pod Dependencies
-  s.dependency = 'Kiwi'
-  s.dependency = 'AFNetworking'
+  s.dependency 'Kiwi'
+  s.dependency 'AFNetworking'
 
 end
