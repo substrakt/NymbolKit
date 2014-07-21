@@ -1,8 +1,18 @@
 #import "Kiwi.h"
 #import "NymbolKit.h"
+#import "Nocilla.h"
+
 
 SPEC_BEGIN(NymbolKitSpec)
-
+beforeAll(^{
+    [[LSNocilla sharedInstance] start];
+});
+afterAll(^{
+    [[LSNocilla sharedInstance] stop];
+});
+afterEach(^{
+    [[LSNocilla sharedInstance] clearStubs];
+});
 describe(@"The login manager", ^{
     
     context(@"when any key and secret are inputted", ^{

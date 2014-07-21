@@ -50,6 +50,8 @@
     });
 }
 
+
+// Get rid of this method. In the method above, when the collection is got, just populate it with a bunch of empty NYMObject objects and then use the method in NYMObject to fill them with data. This method then becomes obsolete.
 - (void)fetchObjectsIfNeededWithBlock:(void (^)(NSArray *, NSError *))block
 {
     dispatch_queue_t queue = dispatch_queue_create("nymbolkit_fetchObjects", nil);
@@ -66,11 +68,13 @@
                 for (NSDictionary *object in responseObject) {
                     NYMObject *newObject = [NYMObject new];
                     newObject.name = object[@"name"];
+                    newObject.pk = [object[@"id"] intValue];
                     newObject.status = (int)object[@"status"];
                     newObject.location = CLLocationCoordinate2DMake([object[@"latitude"] doubleValue], [object[@"longitude"] doubleValue]);
+                    newObject.thumbnailPath = object[@"thumbnail"];
                     newObject.description = object[@"description"];
+                    newObject.collection = self;
                     [assets addObject:newObject];
-                    
                 }
                 self.objects = assets;
                 block(assets, nil);

@@ -8,12 +8,27 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "NYMCollection.h"
+#import <UIKit/UIKit.h>
+#import "AFNetworking.h"
 
 @interface NYMObject : NSObject
 
 @property (nonatomic) NSString *name;
+@property (nonatomic) NYMCollection *collection;
+@property (nonatomic) int pk;
 @property (nonatomic) int status;
 @property (nonatomic) int curator;
 @property (nonatomic) CLLocationCoordinate2D location;
 @property (nonatomic) NSString *description;
+@property (nonatomic) NSString *thumbnailPath;
+@property (nonatomic) NSURL *shareUrl;
+
+
+@property (nonatomic, readonly) BOOL thumbnailIsLoaded;
+@property (nonatomic) BOOL dataIsLoaded;
+
+- (void)fetchThumbnailWithBlock:(void (^)(UIImage *thumbnail, NSError *error))block;
+
+- (void)fetchDataWithBlock:(void (^)(BOOL succeeded, NSError *error, NYMObject *object))block;
 @end
