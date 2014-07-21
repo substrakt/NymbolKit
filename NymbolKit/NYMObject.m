@@ -33,6 +33,8 @@
     } else {
         dispatch_queue_t queue = dispatch_queue_create("nymbolkit_getData", nil);
         dispatch_async(queue, ^{
+            _tags = [[NSMutableArray alloc] init];
+            _links = [[NSMutableArray alloc] init];
             AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
             NSString *imageURLString = [NSString stringWithFormat:@"http://nymbol.co.uk/api/manager/collection/%@/assets/%i.json", _collection.pk, self.pk];
             
@@ -42,6 +44,21 @@
                 _description = responseObject[@"description"];
                 _dataIsLoaded = YES;
                 _shareUrl = [NSURL URLWithString:responseObject[@"share_url"]];
+                for (NSString *tag in responseObject[@"tags"]) {
+                    NYMTag *newTag = [NYMTag new];
+                    newTag.name = tag;
+                    newTag.object = self;
+                    [_tags addObject:self];
+                }
+                
+                for (NSDictionary *link in responseObject[@"links"]) {
+                    NSLog(@"%@", link);
+                    NYMLink *newLink = [NYMLink new];
+                    newLink.title = link[@"title"];
+                    newLink.url = [NSURL URLWithString:link[@"url"]];
+                    newLink.object = self;
+                    [_links addObject:newLink];
+                }
                 block(YES, nil, self);
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 block(NO, error, nil);

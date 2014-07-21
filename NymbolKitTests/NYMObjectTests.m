@@ -1,6 +1,7 @@
 #import "Kiwi.h"
 #import "NYMObject.h"
 #import "Nocilla.h"
+#import "NYMLink.h"
 
 SPEC_BEGIN(NYMObjectSpec)
 
@@ -40,6 +41,36 @@ describe(@"An object", ^{
             NYMCollection __block *collection = [NYMCollection new];
             collection.pk = @"1";
             object.collection = collection;
+        });
+        
+        context(@"where the successful response has tags", ^{
+            beforeEach(^{
+                stubRequest(@"GET", @"http://nymbol.co.uk/api/manager/collection/1/assets/10.json").
+                andReturn(200).
+                withHeaders(@{@"Content-Type": @"application/json"}).
+                withBody(@"{\"tags\": [\"tag-1\", \"tag-2\"]}");
+                [object fetchDataWithBlock:^(BOOL succeeded, NSError *error, NYMObject *object) {}];
+            });
+            
+            it(@"should create two associated tag objects.", ^{
+                [[expectFutureValue(theValue(object.tags.count)) shouldEventually] equal:2 withDelta:0];
+            });
+        });
+        
+        context(@"where the successful response has links", ^{
+            beforeEach(^{
+                stubRequest(@"GET", @"http://nymbol.co.uk/api/manager/collection/1/assets/10.json").
+                andReturn(200).
+                withHeaders(@{@"Content-Type": @"application/json"}).
+                withBody(@"{\"links\": [{ \"url\": \"http://url.com\", \"title\": \"A nice website\" }]}");
+                [object fetchDataWithBlock:^(BOOL succeeded, NSError *error, NYMObject *object) {}];
+            });
+            
+            it(@"should create two associated Link objects.", ^{
+                [[expectFutureValue(theValue(object.links.count)) shouldEventually] equal:1 withDelta:0];
+                [[expectFutureValue([(NYMLink *)object.links[0] url]) shouldEventually] equal:[NSURL URLWithString:@"http://url.com"]];
+                [[expectFutureValue([(NYMLink *)object.links[0] title]) shouldEventually] equal:@"A nice website"];
+            });
         });
         
         context(@"where the response is successful from the server", ^{

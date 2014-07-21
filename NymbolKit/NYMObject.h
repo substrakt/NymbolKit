@@ -11,6 +11,8 @@
 #import "NYMCollection.h"
 #import <UIKit/UIKit.h>
 #import "AFNetworking.h"
+#import "NYMTag.h"
+#import "NYMLink.h"
 
 @interface NYMObject : NSObject
 
@@ -23,6 +25,8 @@
 @property (nonatomic) NSString *description;
 @property (nonatomic) NSString *thumbnailPath;
 @property (nonatomic) NSURL *shareUrl;
+@property (nonatomic) NSMutableArray /*<NYMTag *>*/ *tags;
+@property (nonatomic) NSMutableArray /*<NYMLink *>*/ *links;
 
 
 @property (nonatomic, readonly) BOOL thumbnailIsLoaded;
