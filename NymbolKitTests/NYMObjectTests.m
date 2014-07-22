@@ -21,6 +21,7 @@ describe(@"An object", ^{
     NYMObject __block *object;
     beforeEach(^{
         object = [NYMObject new];
+        stubRequest(@"GET", @"http://gsp1.apple.com/pep/gcc");
     });
     context(@"which has been newly created", ^{
         
@@ -42,7 +43,7 @@ describe(@"An object", ^{
             collection.pk = @"1";
             object.collection = collection;
         });
-        
+
         context(@"where the successful response has tags", ^{
             beforeEach(^{
                 stubRequest(@"GET", @"http://nymbol.co.uk/api/manager/collection/1/assets/10.json").

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D203C88197E86D100BE1F0E /* NYMTaxonomy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D203C87197E86D100BE1F0E /* NYMTaxonomy.m */; };
+		4D203C8A197E878200BE1F0E /* NYMTaxonomyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D203C89197E878200BE1F0E /* NYMTaxonomyTests.m */; };
 		4D879E3319755943005EB394 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D879E3219755943005EB394 /* Foundation.framework */; };
 		4D879E3819755943005EB394 /* NymbolKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D879E3719755943005EB394 /* NymbolKit.h */; };
 		4D879E3A19755943005EB394 /* NymbolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879E3919755943005EB394 /* NymbolKit.m */; };
@@ -24,6 +26,7 @@
 		4DA39801197D4E54006E89E3 /* NYMTagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA39800197D4E54006E89E3 /* NYMTagTests.m */; };
 		4DDAA3B3197D590E00D5C472 /* NYMLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDAA3B2197D590E00D5C472 /* NYMLink.m */; };
 		4DDAA3B5197D593600D5C472 /* NYMLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDAA3B4197D593600D5C472 /* NYMLinkTests.m */; };
+		4DDAA3B7197E620F00D5C472 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DDAA3B6197E620F00D5C472 /* MapKit.framework */; };
 		4DF0321D19796BFD00C6F4CB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF0321C19796BFD00C6F4CB /* CoreLocation.framework */; };
 		C0F6A8CE59484FD08CFBC3D0 /* libPods-NymbolKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D057A56D7EE423A99B451E9 /* libPods-NymbolKitTests.a */; };
 		ED590039C8F0477482E95592 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5E8E8AA86244C29714B071 /* libPods.a */; };
@@ -55,6 +58,9 @@
 /* Begin PBXFileReference section */
 		220864EBA0344BC2964F8BAC /* Pods-NymbolKitTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NymbolKitTests.xcconfig"; path = "Pods/Pods-NymbolKitTests.xcconfig"; sourceTree = "<group>"; };
 		2D057A56D7EE423A99B451E9 /* libPods-NymbolKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NymbolKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D203C86197E86D100BE1F0E /* NYMTaxonomy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYMTaxonomy.h; sourceTree = "<group>"; };
+		4D203C87197E86D100BE1F0E /* NYMTaxonomy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMTaxonomy.m; sourceTree = "<group>"; };
+		4D203C89197E878200BE1F0E /* NYMTaxonomyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMTaxonomyTests.m; sourceTree = "<group>"; };
 		4D879E2F19755943005EB394 /* libNymbolKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNymbolKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D879E3219755943005EB394 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4D879E3619755943005EB394 /* NymbolKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NymbolKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 		4DDAA3B1197D590E00D5C472 /* NYMLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYMLink.h; sourceTree = "<group>"; };
 		4DDAA3B2197D590E00D5C472 /* NYMLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMLink.m; sourceTree = "<group>"; };
 		4DDAA3B4197D593600D5C472 /* NYMLinkTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMLinkTests.m; sourceTree = "<group>"; };
+		4DDAA3B6197E620F00D5C472 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4DF0321C19796BFD00C6F4CB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4E5E8E8AA86244C29714B071 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		76256E6D0BBE41D9A8F87CD0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -89,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DDAA3B7197E620F00D5C472 /* MapKit.framework in Frameworks */,
 				4DF0321D19796BFD00C6F4CB /* CoreLocation.framework in Frameworks */,
 				4D879E3319755943005EB394 /* Foundation.framework in Frameworks */,
 				ED590039C8F0477482E95592 /* libPods.a in Frameworks */,
@@ -135,6 +143,7 @@
 		4D879E3119755943005EB394 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DDAA3B6197E620F00D5C472 /* MapKit.framework */,
 				4DF0321C19796BFD00C6F4CB /* CoreLocation.framework */,
 				4D879E3219755943005EB394 /* Foundation.framework */,
 				4D879E4019755943005EB394 /* XCTest.framework */,
@@ -150,14 +159,7 @@
 			children = (
 				4D879E3719755943005EB394 /* NymbolKit.h */,
 				4D879E3919755943005EB394 /* NymbolKit.m */,
-				4D8ACFC719790E2100A1E7BE /* NYMCollection.h */,
-				4D8ACFC819790E2100A1E7BE /* NYMCollection.m */,
-				4D8ACFCD19792AAA00A1E7BE /* NYMObject.h */,
-				4D8ACFCE19792AAA00A1E7BE /* NYMObject.m */,
-				4DA397FD197D4E48006E89E3 /* NYMTag.h */,
-				4DA397FE197D4E48006E89E3 /* NYMTag.m */,
-				4DDAA3B1197D590E00D5C472 /* NYMLink.h */,
-				4DDAA3B2197D590E00D5C472 /* NYMLink.m */,
+				4DDAA3B8197E622E00D5C472 /* Models */,
 				4D879E3519755943005EB394 /* Supporting Files */,
 			);
 			path = NymbolKit;
@@ -179,6 +181,7 @@
 				4D8ACFD019792ABA00A1E7BE /* NYMObjectTests.m */,
 				4DA39800197D4E54006E89E3 /* NYMTagTests.m */,
 				4DDAA3B4197D593600D5C472 /* NYMLinkTests.m */,
+				4D203C89197E878200BE1F0E /* NYMTaxonomyTests.m */,
 				4D879E4919755943005EB394 /* Supporting Files */,
 			);
 			path = NymbolKitTests;
@@ -191,6 +194,23 @@
 				4D879E4B19755943005EB394 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4DDAA3B8197E622E00D5C472 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4D8ACFC719790E2100A1E7BE /* NYMCollection.h */,
+				4D8ACFC819790E2100A1E7BE /* NYMCollection.m */,
+				4D8ACFCD19792AAA00A1E7BE /* NYMObject.h */,
+				4D8ACFCE19792AAA00A1E7BE /* NYMObject.m */,
+				4DA397FD197D4E48006E89E3 /* NYMTag.h */,
+				4DA397FE197D4E48006E89E3 /* NYMTag.m */,
+				4DDAA3B1197D590E00D5C472 /* NYMLink.h */,
+				4DDAA3B2197D590E00D5C472 /* NYMLink.m */,
+				4D203C86197E86D100BE1F0E /* NYMTaxonomy.h */,
+				4D203C87197E86D100BE1F0E /* NYMTaxonomy.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D8ACFC919790E2100A1E7BE /* NYMCollection.m in Sources */,
+				4D203C88197E86D100BE1F0E /* NYMTaxonomy.m in Sources */,
 				4D8ACFCF19792AAA00A1E7BE /* NYMObject.m in Sources */,
 				4D879E3A19755943005EB394 /* NymbolKit.m in Sources */,
 				4DDAA3B3197D590E00D5C472 /* NYMLink.m in Sources */,
@@ -358,6 +379,7 @@
 				4D8ACFD119792ABA00A1E7BE /* NYMObjectTests.m in Sources */,
 				4D879E4F19755943005EB394 /* NymbolKitTests.m in Sources */,
 				4DA39801197D4E54006E89E3 /* NYMTagTests.m in Sources */,
+				4D203C8A197E878200BE1F0E /* NYMTaxonomyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
