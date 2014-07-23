@@ -2,6 +2,7 @@
 #import "NYMObject.h"
 #import "Nocilla.h"
 #import "NYMLink.h"
+#import <MapKit/MapKit.h>
 
 SPEC_BEGIN(NYMObjectSpec)
 
@@ -32,6 +33,10 @@ describe(@"An object", ^{
         
         it(@"should not be loaded.", ^{
             [[theValue([object dataIsLoaded]) should] beNo];
+        });
+        
+        it(@"should conform to the MKAnnotation protocol.", ^{
+            [[object should] conformToProtocol:@protocol(MKAnnotation)];
         });
         
     });

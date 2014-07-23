@@ -13,8 +13,9 @@
 #import "AFNetworking.h"
 #import "NYMTag.h"
 #import "NYMLink.h"
+#import <MapKit/MapKit.h>
 
-@interface NYMObject : NSObject
+@interface NYMObject : NSObject <MKAnnotation>
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NYMCollection *collection;
