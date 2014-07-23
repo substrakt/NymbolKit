@@ -23,7 +23,7 @@ describe(@"Fetching all taxonomies", ^{
             stubRequest(@"GET", @"http://nymbol.co.uk/api/manager/collection/1/taxonomies.json").
             andReturn(200).
             withHeaders(@{@"Content-Type": @"application/json"}).
-            withBody(@"[{\"terms\": 6, \"name\": \"Pictures\", \"tags\": [\"tag-1\"]}]");
+            withBody(@"[{\"id\": 6, \"terms\": 6, \"name\": \"Pictures\", \"tags\": [\"tag-1\"]}]");
             collection = [NYMCollection new];
             [collection setPk:@"1"];
             [NYMTaxonomy allTaxonomiesForCollection:collection WithBlock:^(NSArray *taxonomies, NSError *error) {

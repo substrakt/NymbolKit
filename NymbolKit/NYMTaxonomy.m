@@ -6,12 +6,7 @@
 + (void)allTaxonomiesForCollection:(NYMCollection *)collection WithBlock:(void (^)(NSArray *, NSError *))block{
     dispatch_queue_t queue = dispatch_queue_create("nymbolkit_allTaxonomies", nil);
     dispatch_async(queue, ^{
-        NSString *urlString = [NSString stringWithFormat:@"http://nymbol.co.uk/api/manager/collection/%@/taxonomies.json", collection.pk];
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
-        [request setValue:[NymbolKit authHeaderKey] forHTTPHeaderField:@"Authorization"];
-        [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-        [request setValue:@"testdeicive238938" forHTTPHeaderField:@"X-Device"];
-        [request setValue:@"ios" forHTTPHeaderField:@"X-Platform"];
+        NSURLRequest *request = [NymbolKit customBaseRequestWithEndpoint:[NSString stringWithFormat:@"http://nymbol.co.uk/api/manager/collection/%@/taxonomies.json", collection.pk]];
         AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
         operation.responseSerializer = [AFJSONResponseSerializer serializer];
         
@@ -20,6 +15,7 @@
             for (NSDictionary *taxonomy in responseObject) {
                 NYMTaxonomy *newTaxonomy = [NYMTaxonomy new];
                 newTaxonomy.name = taxonomy[@"name"];
+                newTaxonomy.pk = taxonomy[@"id"];
                 newTaxonomy.collection = collection;
                 [taxonomies addObject:newTaxonomy];
                 NSMutableArray *tags = [[NSMutableArray alloc] init];

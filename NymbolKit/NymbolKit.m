@@ -30,9 +30,20 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     [request setValue:[NymbolKit authHeaderKey] forHTTPHeaderField:@"Authorization"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [request setValue:@"testdeicive238938" forHTTPHeaderField:@"X-Device"];
+    [request setValue:[NSString stringWithFormat:@"%@", [UIDevice currentDevice].identifierForVendor] forHTTPHeaderField:@"X-Device"];
     [request setValue:@"ios" forHTTPHeaderField:@"X-Platform"];
     return request;
 }
+
++ (NSURLRequest *)customBaseRequestWithEndpoint:(NSString *)endpoint
+{
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:endpoint]];
+    [request setValue:[NymbolKit authHeaderKey] forHTTPHeaderField:@"Authorization"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:[NSString stringWithFormat:@"%@", [UIDevice currentDevice].identifierForVendor] forHTTPHeaderField:@"X-Device"];
+    [request setValue:@"ios" forHTTPHeaderField:@"X-Platform"];
+    return request;
+}
+
 
 @end

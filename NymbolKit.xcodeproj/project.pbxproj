@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4D203C88197E86D100BE1F0E /* NYMTaxonomy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D203C87197E86D100BE1F0E /* NYMTaxonomy.m */; };
 		4D203C8A197E878200BE1F0E /* NYMTaxonomyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D203C89197E878200BE1F0E /* NYMTaxonomyTests.m */; };
+		4D203C8D197FABE800BE1F0E /* NYMTaxonomyTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D203C8C197FABE800BE1F0E /* NYMTaxonomyTerm.m */; };
+		4D203C8F197FABF500BE1F0E /* NYMTaxonomyTermTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D203C8E197FABF500BE1F0E /* NYMTaxonomyTermTests.m */; };
 		4D879E3319755943005EB394 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D879E3219755943005EB394 /* Foundation.framework */; };
 		4D879E3819755943005EB394 /* NymbolKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D879E3719755943005EB394 /* NymbolKit.h */; };
 		4D879E3A19755943005EB394 /* NymbolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879E3919755943005EB394 /* NymbolKit.m */; };
@@ -61,6 +63,9 @@
 		4D203C86197E86D100BE1F0E /* NYMTaxonomy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYMTaxonomy.h; sourceTree = "<group>"; };
 		4D203C87197E86D100BE1F0E /* NYMTaxonomy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMTaxonomy.m; sourceTree = "<group>"; };
 		4D203C89197E878200BE1F0E /* NYMTaxonomyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMTaxonomyTests.m; sourceTree = "<group>"; };
+		4D203C8B197FABE800BE1F0E /* NYMTaxonomyTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYMTaxonomyTerm.h; sourceTree = "<group>"; };
+		4D203C8C197FABE800BE1F0E /* NYMTaxonomyTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMTaxonomyTerm.m; sourceTree = "<group>"; };
+		4D203C8E197FABF500BE1F0E /* NYMTaxonomyTermTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMTaxonomyTermTests.m; sourceTree = "<group>"; };
 		4D879E2F19755943005EB394 /* libNymbolKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNymbolKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D879E3219755943005EB394 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4D879E3619755943005EB394 /* NymbolKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NymbolKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -182,6 +187,7 @@
 				4DA39800197D4E54006E89E3 /* NYMTagTests.m */,
 				4DDAA3B4197D593600D5C472 /* NYMLinkTests.m */,
 				4D203C89197E878200BE1F0E /* NYMTaxonomyTests.m */,
+				4D203C8E197FABF500BE1F0E /* NYMTaxonomyTermTests.m */,
 				4D879E4919755943005EB394 /* Supporting Files */,
 			);
 			path = NymbolKitTests;
@@ -209,6 +215,8 @@
 				4DDAA3B2197D590E00D5C472 /* NYMLink.m */,
 				4D203C86197E86D100BE1F0E /* NYMTaxonomy.h */,
 				4D203C87197E86D100BE1F0E /* NYMTaxonomy.m */,
+				4D203C8B197FABE800BE1F0E /* NYMTaxonomyTerm.h */,
+				4D203C8C197FABE800BE1F0E /* NYMTaxonomyTerm.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -366,6 +374,7 @@
 				4D8ACFCF19792AAA00A1E7BE /* NYMObject.m in Sources */,
 				4D879E3A19755943005EB394 /* NymbolKit.m in Sources */,
 				4DDAA3B3197D590E00D5C472 /* NYMLink.m in Sources */,
+				4D203C8D197FABE800BE1F0E /* NYMTaxonomyTerm.m in Sources */,
 				4DA397FF197D4E48006E89E3 /* NYMTag.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DDAA3B5197D593600D5C472 /* NYMLinkTests.m in Sources */,
+				4D203C8F197FABF500BE1F0E /* NYMTaxonomyTermTests.m in Sources */,
 				4D8ACFCB19790E3700A1E7BE /* NYMCollectionTests.m in Sources */,
 				4D8ACFD119792ABA00A1E7BE /* NYMObjectTests.m in Sources */,
 				4D879E4F19755943005EB394 /* NymbolKitTests.m in Sources */,

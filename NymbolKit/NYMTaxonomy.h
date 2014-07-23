@@ -3,6 +3,7 @@
 @interface NYMTaxonomy : NSObject
 
 @property (nonatomic) NSString *name;
+@property (nonatomic) NSString *pk;
 @property (nonatomic) NSMutableArray *terms;
 @property (nonatomic) NSMutableArray *tags;
 @property (nonatomic) NYMCollection *collection;
