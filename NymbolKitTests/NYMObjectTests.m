@@ -37,11 +37,31 @@ describe(@"An object", ^{
     });
     
     context(@"with ID 4 and a collection set", ^{
+        NYMCollection __block *collection;
         beforeEach(^{
             object.pk = @"10";
-            NYMCollection __block *collection = [NYMCollection new];
+            collection = [NYMCollection new];
             collection.pk = @"1";
             object.collection = collection;
+        });
+        
+        context(@"where we want to get all of the associated objects", ^{
+            NSArray __block *parentObjects;
+            beforeEach(^{
+                
+                stubRequest(@"GET", @"http://nymbol.co.uk/api/manager/collection/1/assets.json").
+                andReturn(200).
+                withHeaders(@{@"Content-Type": @"application/json"}).
+                withBody(@"[{\"name\": \"a\", \"id\": 4}]");
+
+                [NYMObject allObjectsForCollection:collection WithBlock:^(NSArray *objects, NSError *error) {
+                    parentObjects = objects;
+                }];
+            });
+            
+            it(@"should have an object.", ^{
+                [[expectFutureValue(theValue(parentObjects.count)) shouldEventually] equal:1 withDelta:0];
+            });
         });
 
         context(@"where the successful response has tags", ^{
