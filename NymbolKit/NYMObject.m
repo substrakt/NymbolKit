@@ -67,7 +67,10 @@
             operation.responseSerializer = [AFJSONResponseSerializer serializer];
             
             [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-                _location = CLLocationCoordinate2DMake([responseObject[@"latitude"] doubleValue], [responseObject[@"longitude"] doubleValue]);
+                if (responseObject[@"latitude"] && responseObject[@"longitude"]) {
+                    _location = CLLocationCoordinate2DMake([responseObject[@"latitude"] doubleValue], [responseObject[@"longitude"] doubleValue]);
+                }
+                
                 _description = responseObject[@"description"];
                 _dataIsLoaded = YES;
                 _shareUrl = [NSURL URLWithString:responseObject[@"share_url"]];
