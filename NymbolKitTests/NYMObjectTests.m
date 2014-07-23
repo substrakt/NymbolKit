@@ -38,7 +38,7 @@ describe(@"An object", ^{
     
     context(@"with ID 4 and a collection set", ^{
         beforeEach(^{
-            object.pk = 10;
+            object.pk = @"10";
             NYMCollection __block *collection = [NYMCollection new];
             collection.pk = @"1";
             object.collection = collection;

@@ -18,7 +18,7 @@
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NYMCollection *collection;
-@property (nonatomic) int pk;
+@property (nonatomic) NSString *pk;
 @property (nonatomic) int status;
 @property (nonatomic) int curator;
 @property (nonatomic) CLLocationCoordinate2D location;
@@ -31,6 +31,8 @@
 
 @property (nonatomic, readonly) BOOL thumbnailIsLoaded;
 @property (nonatomic) BOOL dataIsLoaded;
+
++ (void)allObjectsForCollection:(NYMCollection *)collection WithBlock:(void (^)(NSArray *objects, NSError *error))block;
 
 - (void)fetchThumbnailWithBlock:(void (^)(UIImage *thumbnail, NSError *error))block;
 

@@ -68,7 +68,7 @@
                 for (NSDictionary *object in responseObject) {
                     NYMObject *newObject = [NYMObject new];
                     newObject.name = object[@"name"];
-                    newObject.pk = [object[@"id"] intValue];
+                    newObject.pk = object[@"id"];
                     newObject.status = (int)object[@"status"];
                     newObject.location = CLLocationCoordinate2DMake([object[@"latitude"] doubleValue], [object[@"longitude"] doubleValue]);
                     newObject.thumbnailPath = object[@"thumbnail"];
