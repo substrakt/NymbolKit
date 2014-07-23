@@ -106,6 +106,11 @@
     return _location;
 }
 
+- (NSString *)title
+{
+    return self.title;
+}
+
 - (MKPinAnnotationView *)pinAnnotationView
 {
     MKPinAnnotationView *pin = [[MKPinAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"pin"];
