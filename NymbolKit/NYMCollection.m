@@ -18,7 +18,7 @@
                 NYMCollection *newCollection = [NYMCollection new];
                 newCollection.name = collection[@"name"];
                 newCollection.uid = collection[@"uid"];
-                newCollection.pk = collection[@"pk"];
+                newCollection.pk = collection[@"id"];
                 [collections addObject:newCollection];
             }
             block(collections, nil);
