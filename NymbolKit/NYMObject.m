@@ -23,7 +23,7 @@
             for (NSDictionary *object in responseObject) {
                 NYMObject *newObject = [NYMObject new];
                 newObject.name = object[@"name"];
-                newObject.pk = object[@"id"];
+                newObject.pk = [object[@"id"] stringValue];
                 newObject.dataIsLoaded = NO;
                 newObject.collection = collection;
                 [objects addObject:newObject];
