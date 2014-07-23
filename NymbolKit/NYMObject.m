@@ -67,7 +67,7 @@
             operation.responseSerializer = [AFJSONResponseSerializer serializer];
             
             [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-                if (responseObject[@"latitude"] && responseObject[@"longitude"]) {
+                if (responseObject[@"latitude"] != nil && responseObject[@"longitude"] != nil) {
                     _location = CLLocationCoordinate2DMake([responseObject[@"latitude"] doubleValue], [responseObject[@"longitude"] doubleValue]);
                 }
                 

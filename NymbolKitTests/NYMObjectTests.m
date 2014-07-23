@@ -99,6 +99,22 @@ describe(@"An object", ^{
             });
         });
         
+        context(@"where the response is succesful but the object does not have a location", ^{
+            beforeEach(^{
+                stubRequest(@"GET", @"http://nymbol.co.uk/api/manager/collection/1/assets/10.json").
+                andReturn(200).
+                withHeaders(@{@"Content-Type": @"application/json"}).
+                withBody(@"{\"name\": \"abc\", \"id\": 4}");
+                
+                [object fetchDataWithBlock:^(BOOL succeeded, NSError *error, NYMObject *object) {}];
+            });
+            
+            it(@"should have a 0 lat/long location.", ^{
+
+                [[expectFutureValue(theValue(object.location.latitude)) shouldEventually] equal:0 withDelta:0];
+            });
+        });
+        
         context(@"where the response is successful from the server", ^{
             beforeEach(^{
                 stubRequest(@"GET", @"http://nymbol.co.uk/api/manager/collection/1/assets/10.json").
