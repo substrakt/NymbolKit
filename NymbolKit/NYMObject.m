@@ -60,11 +60,13 @@
         dispatch_async(queue, ^{
             _tags = [[NSMutableArray alloc] init];
             _links = [[NSMutableArray alloc] init];
-            AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-            NSString *imageURLString = [NSString stringWithFormat:@"http://nymbol.co.uk/api/manager/collection/%@/assets/%@.json", _collection.pk, self.pk];
+
+            NSURLRequest *request = [NymbolKit customBaseRequestWithEndpoint:[NSString stringWithFormat:@"http://nymbol.co.uk/api/manager/collection/%@/assets/%@.json", _collection.pk, self.pk]];
             
-            [manager GET:imageURLString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                NSLog(@"%@", responseObject);
+            AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+            operation.responseSerializer = [AFJSONResponseSerializer serializer];
+            
+            [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
                 _location = CLLocationCoordinate2DMake([responseObject[@"latitude"] doubleValue], [responseObject[@"longitude"] doubleValue]);
                 _description = responseObject[@"description"];
                 _dataIsLoaded = YES;
@@ -85,9 +87,11 @@
                     [_links addObject:newLink];
                 }
                 block(YES, nil, self);
+
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 block(NO, error, nil);
             }];
+            [operation start];
         });
     }
 }
