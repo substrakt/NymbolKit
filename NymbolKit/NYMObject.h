@@ -38,4 +38,5 @@
 - (void)fetchThumbnailWithBlock:(void (^)(UIImage *thumbnail, NSError *error))block;
 
 - (void)fetchDataWithBlock:(void (^)(BOOL succeeded, NSError *error, NYMObject *object))block;
+- (MKPinAnnotationView *)pinAnnotationView;
 @end

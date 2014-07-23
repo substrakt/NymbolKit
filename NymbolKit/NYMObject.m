@@ -99,9 +99,19 @@
     }
 }
 
+#pragma mark - MKAnnotation
+
 - (CLLocationCoordinate2D)coordinate
 {
     return _location;
+}
+
+- (MKPinAnnotationView *)pinAnnotationView
+{
+    MKPinAnnotationView *pin = [[MKPinAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"pin"];
+    [pin setPinColor:MKPinAnnotationColorGreen];
+    [pin setAnimatesDrop:YES];
+    return pin;
 }
 
 @end
