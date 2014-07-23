@@ -108,7 +108,7 @@
 
 - (NSString *)title
 {
-    return self.title;
+    return self.name;
 }
 
 - (MKPinAnnotationView *)pinAnnotationView
@@ -116,6 +116,7 @@
     MKPinAnnotationView *pin = [[MKPinAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"pin"];
     [pin setPinColor:MKPinAnnotationColorGreen];
     [pin setAnimatesDrop:YES];
+    pin.canShowCallout = YES;
     return pin;
 }
 
