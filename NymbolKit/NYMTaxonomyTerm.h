@@ -11,8 +11,11 @@
 @interface NYMTaxonomyTerm : NSObject
 
 @property (nonatomic) NSString *name;
+@property (nonatomic) NSString *pk;
 @property (nonatomic) NSURL *shareURL;
 @property (nonatomic) NYMTaxonomy *taxonomy;
 
 + (void)allTermsForTaxonomy:(NYMTaxonomy *)taxonomy WithBlock:(void (^)(NSArray *terms, NSError *error))block;
+
+- (void)allObjectsWithBlock:(void (^)(NSArray *objects, NSError *error))block;
 @end
