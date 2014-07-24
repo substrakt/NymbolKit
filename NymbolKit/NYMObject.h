@@ -22,6 +22,7 @@
 @property (nonatomic) NSString *pk;
 @property (nonatomic) int status;
 @property (nonatomic) int curator;
+@property (nonatomic) NSArray *resources;
 @property (nonatomic) CLLocationCoordinate2D location;
 @property (nonatomic) NSString *description;
 @property (nonatomic) NSString *thumbnailPath;

@@ -89,7 +89,7 @@
 {
     dispatch_queue_t queue = dispatch_queue_create("nymbolkit_getResources", nil);
     dispatch_async(queue, ^{
-        
+        _resources = [NSArray new];
         NSURLRequest *request = [NymbolKit customBaseRequestWithEndpoint:[NSString stringWithFormat:@"http://nymbol.co.uk/api/manager/collection/%@/assets/%@/resources.json", _collection.pk, self.pk]];
         
         AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
@@ -104,6 +104,7 @@
                 newResource.url = [NSURL URLWithString:resource[@"media"]];
                 [resources addObject:newResource];
             }
+            _resources = resources;
             block(YES, nil, resources);
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
