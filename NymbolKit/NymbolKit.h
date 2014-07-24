@@ -1,5 +1,11 @@
 #import <Foundation/Foundation.h>
 #import "CocoaSecurity.h"
+#import "NYMCollection.h"
+#import "NYMObject.h"
+#import "NYMTag.h"
+#import "NYMLink.h"
+#import "NYMTaxonomy.h"
+#import "NYMTaxonomyTerm.h"
 
 /**
  *  Base class used for authentication

@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "NYMCollection.h"
 
 @interface NYMTaxonomy : NSObject
 
