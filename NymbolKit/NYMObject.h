@@ -35,8 +35,8 @@
 
 + (void)allObjectsForCollection:(NYMCollection *)collection WithBlock:(void (^)(NSArray *objects, NSError *error))block;
 
-- (void)fetchThumbnailWithBlock:(void (^)(UIImage *thumbnail, NSError *error))block;
-
 - (void)fetchDataWithBlock:(void (^)(BOOL succeeded, NSError *error, NYMObject *object))block;
+- (void)fetchResourcesWithBlock:(void (^)(BOOL succeeded, NSError *error, NSArray *resources))block;
+
 - (MKPinAnnotationView *)pinAnnotationView;
 @end

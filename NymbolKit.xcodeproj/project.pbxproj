@@ -26,6 +26,8 @@
 		4D8ACFD119792ABA00A1E7BE /* NYMObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8ACFD019792ABA00A1E7BE /* NYMObjectTests.m */; };
 		4DA397FF197D4E48006E89E3 /* NYMTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA397FE197D4E48006E89E3 /* NYMTag.m */; };
 		4DA39801197D4E54006E89E3 /* NYMTagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA39800197D4E54006E89E3 /* NYMTagTests.m */; };
+		4DD6D1991981442D0035D1D1 /* NYMResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD6D1981981442D0035D1D1 /* NYMResource.m */; };
+		4DD6D19B198146460035D1D1 /* NYMResourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD6D19A198146460035D1D1 /* NYMResourceTests.m */; };
 		4DDAA3B3197D590E00D5C472 /* NYMLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDAA3B2197D590E00D5C472 /* NYMLink.m */; };
 		4DDAA3B5197D593600D5C472 /* NYMLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDAA3B4197D593600D5C472 /* NYMLinkTests.m */; };
 		4DDAA3B7197E620F00D5C472 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DDAA3B6197E620F00D5C472 /* MapKit.framework */; };
@@ -87,6 +89,9 @@
 		4DA397FD197D4E48006E89E3 /* NYMTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYMTag.h; sourceTree = "<group>"; };
 		4DA397FE197D4E48006E89E3 /* NYMTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMTag.m; sourceTree = "<group>"; };
 		4DA39800197D4E54006E89E3 /* NYMTagTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMTagTests.m; sourceTree = "<group>"; };
+		4DD6D1971981442D0035D1D1 /* NYMResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYMResource.h; sourceTree = "<group>"; };
+		4DD6D1981981442D0035D1D1 /* NYMResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMResource.m; sourceTree = "<group>"; };
+		4DD6D19A198146460035D1D1 /* NYMResourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMResourceTests.m; sourceTree = "<group>"; };
 		4DDAA3B1197D590E00D5C472 /* NYMLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYMLink.h; sourceTree = "<group>"; };
 		4DDAA3B2197D590E00D5C472 /* NYMLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMLink.m; sourceTree = "<group>"; };
 		4DDAA3B4197D593600D5C472 /* NYMLinkTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYMLinkTests.m; sourceTree = "<group>"; };
@@ -188,6 +193,7 @@
 				4DDAA3B4197D593600D5C472 /* NYMLinkTests.m */,
 				4D203C89197E878200BE1F0E /* NYMTaxonomyTests.m */,
 				4D203C8E197FABF500BE1F0E /* NYMTaxonomyTermTests.m */,
+				4DD6D19A198146460035D1D1 /* NYMResourceTests.m */,
 				4D879E4919755943005EB394 /* Supporting Files */,
 			);
 			path = NymbolKitTests;
@@ -202,9 +208,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4DD6D196198144200035D1D1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4DD6D1971981442D0035D1D1 /* NYMResource.h */,
+				4DD6D1981981442D0035D1D1 /* NYMResource.m */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		4DDAA3B8197E622E00D5C472 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4DD6D196198144200035D1D1 /* Resource */,
 				4D8ACFC719790E2100A1E7BE /* NYMCollection.h */,
 				4D8ACFC819790E2100A1E7BE /* NYMCollection.m */,
 				4D8ACFCD19792AAA00A1E7BE /* NYMObject.h */,
@@ -373,6 +389,7 @@
 				4D203C88197E86D100BE1F0E /* NYMTaxonomy.m in Sources */,
 				4D8ACFCF19792AAA00A1E7BE /* NYMObject.m in Sources */,
 				4D879E3A19755943005EB394 /* NymbolKit.m in Sources */,
+				4DD6D1991981442D0035D1D1 /* NYMResource.m in Sources */,
 				4DDAA3B3197D590E00D5C472 /* NYMLink.m in Sources */,
 				4D203C8D197FABE800BE1F0E /* NYMTaxonomyTerm.m in Sources */,
 				4DA397FF197D4E48006E89E3 /* NYMTag.m in Sources */,
@@ -387,6 +404,7 @@
 				4D203C8F197FABF500BE1F0E /* NYMTaxonomyTermTests.m in Sources */,
 				4D8ACFCB19790E3700A1E7BE /* NYMCollectionTests.m in Sources */,
 				4D8ACFD119792ABA00A1E7BE /* NYMObjectTests.m in Sources */,
+				4DD6D19B198146460035D1D1 /* NYMResourceTests.m in Sources */,
 				4D879E4F19755943005EB394 /* NymbolKitTests.m in Sources */,
 				4DA39801197D4E54006E89E3 /* NYMTagTests.m in Sources */,
 				4D203C8A197E878200BE1F0E /* NYMTaxonomyTests.m in Sources */,

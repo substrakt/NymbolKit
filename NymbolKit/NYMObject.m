@@ -8,6 +8,7 @@
 
 #import "NYMObject.h"
 #import "NymbolKit.h"
+#import "NYMResource.h"
 
 @implementation NYMObject
 
@@ -33,21 +34,6 @@
             block(nil, error);
         }];
         [operation start];
-    });
-}
-
-// Looks like thumbnail is missing. Will need to talk to Mark about this.
-- (void)fetchThumbnailWithBlock:(void (^)(UIImage *, NSError *))block
-{
-    dispatch_queue_t queue = dispatch_queue_create("nymbolkit_getThumbnail", nil);
-    dispatch_async(queue, ^{
-        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-        NSString *imageURLString = [NSString stringWithFormat:@"https://nymbol.co.uk%@", self.thumbnailPath];
-        [manager GET:imageURLString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSLog(@"JSON: %@", responseObject);
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            block(nil, error);
-        }];
     });
 }
 
@@ -97,6 +83,34 @@
             [operation start];
         });
     }
+}
+
+- (void)fetchResourcesWithBlock:(void (^)(BOOL, NSError *, NSArray *))block
+{
+    dispatch_queue_t queue = dispatch_queue_create("nymbolkit_getResources", nil);
+    dispatch_async(queue, ^{
+        
+        NSURLRequest *request = [NymbolKit customBaseRequestWithEndpoint:[NSString stringWithFormat:@"http://nymbol.co.uk/api/manager/collection/%@/assets/%@/resources.json", _collection.pk, self.pk]];
+        
+        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+        operation.responseSerializer = [AFJSONResponseSerializer serializer];
+        
+        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSMutableArray *resources = [[NSMutableArray alloc] init];
+            for (NSDictionary *resource in responseObject) {
+                NYMResource *newResource = [NYMResource new];
+                // Only deals with image resource at the moment
+                newResource.kind = NYMResourceTypeImage;
+                newResource.url = [NSURL URLWithString:resource[@"media"]];
+                [resources addObject:newResource];
+            }
+            block(YES, nil, resources);
+            
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            block(NO, error, nil);
+        }];
+        [operation start];
+    });
 }
 
 #pragma mark - MKAnnotation
