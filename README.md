@@ -25,7 +25,7 @@ pod 'NymbolKit'
 
 Fetch all collections:
 
-```
+```objectivec
 [NYMCollection allCollectionsWithBlock:^(NSArray *collections, NSError *error) {
     if(!error) {
         // collections will be an array of NYMCollection objects
