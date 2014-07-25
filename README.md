@@ -56,3 +56,15 @@ collection.pk = @"4";
     // objects are available here
 }];
 ```
+> Note: This call doesn't populate the data for the objects. It only populates `name`, `pk` and `collection`. You'll need to run `fetchResourcesWithBlock:` to get other information about the object.
+
+Fetch all data for an object:
+
+```objectivec
+NYMCollection *collection = [NYMCollection new];
+collection.pk = @"4";
+[NYMObject allObjectsForCollection:collection WithBlock:^(NSArray *objects, NSError *error){
+    NYMObject *firstObject = [objects objectAtIndex:0];
+    firstObject fetchResourcesWithBlock....
+}];
+```
