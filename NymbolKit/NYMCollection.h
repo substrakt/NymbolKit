@@ -5,10 +5,10 @@
 /**
  *  NSArray of NYMObjects
  */
-@property (nonatomic) NSArray *objects;
-@property (nonatomic) NSString *name;
-@property (nonatomic) NSString *uid;
-@property (nonatomic) NSString *pk;
+@property (nonatomic, retain) NSArray *objects;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *uid;
+@property (nonatomic, retain) NSString *pk;
 
 /**
  *  Fetch all collections asyncronously

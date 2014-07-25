@@ -11,8 +11,8 @@
 @class NYMObject;
 @interface NYMLink : NSObject
 
-@property (nonatomic) NSURL *url;
-@property (nonatomic) NSString *title;
-@property (nonatomic) NYMObject *object;
+@property (nonatomic, retain) NSURL *url;
+@property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NYMObject *object;
 
 @end

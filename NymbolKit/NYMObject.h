@@ -17,18 +17,18 @@
 
 @interface NYMObject : NSObject <MKAnnotation>
 
-@property (nonatomic) NSString *name;
-@property (nonatomic) NYMCollection *collection;
-@property (nonatomic) NSString *pk;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NYMCollection *collection;
+@property (nonatomic, retain) NSString *pk;
 @property (nonatomic) int status;
 @property (nonatomic) int curator;
-@property (nonatomic) NSArray *resources;
+@property (nonatomic, retain) NSArray *resources;
 @property (nonatomic) CLLocationCoordinate2D location;
-@property (nonatomic) NSString *description;
-@property (nonatomic) NSString *thumbnailPath;
-@property (nonatomic) NSURL *shareUrl;
-@property (nonatomic) NSMutableArray /*<NYMTag *>*/ *tags;
-@property (nonatomic) NSMutableArray /*<NYMLink *>*/ *links;
+@property (nonatomic, retain) NSString *description;
+@property (nonatomic, retain) NSString *thumbnailPath;
+@property (nonatomic, retain) NSURL *shareUrl;
+@property (nonatomic, retain) NSMutableArray /*<NYMTag *>*/ *tags;
+@property (nonatomic, retain) NSMutableArray /*<NYMLink *>*/ *links;
 
 
 @property (nonatomic, readonly) BOOL thumbnailIsLoaded;

@@ -3,10 +3,10 @@
 @class NYMObject, NYMTaxonomy;
 @interface NYMTag : NSObject
 
-@property (nonatomic) NSString *name;
+@property (nonatomic, retain) NSString *name;
 
 // Optionally an Object or a Taxonomy
-@property (nonatomic) NYMObject *object;
-@property (nonatomic) NYMTaxonomy *taxonomy;
+@property (nonatomic, retain) NYMObject *object;
+@property (nonatomic, retain) NYMTaxonomy *taxonomy;
 
 @end
