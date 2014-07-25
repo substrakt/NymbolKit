@@ -68,3 +68,5 @@ collection.pk = @"4";
     firstObject fetchResourcesWithBlock....
 }];
 ```
+
+`NYMObjects` conform to the `MKAnnotation` protocol meaning you can add them to a `MKMapView` very easily. 
