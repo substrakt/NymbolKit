@@ -25,9 +25,22 @@ pod 'NymbolKit'
 
 Fetch all collections:
 
-```Objective-C
+```objectivec
 [NYMCollection allCollectionsWithBlock:^(NSArray *collections, NSError *error) {
     if(!error) {
         // collections will be an array of NYMCollection objects
     }
 }];
+```
+
+Fetch a single collection:
+
+```objectivec
+NYMCollection __block *parentCollection;
+[NYMCollection collectionWithUID:4 block:^(NYMCollection *collection, NSError *error) {
+    if(!error) {
+        parentCollection = collection;
+        # Maybe reload a table view here, or something else...
+    }
+}];
+```
