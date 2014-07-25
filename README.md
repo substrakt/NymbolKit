@@ -70,3 +70,13 @@ collection.pk = @"4";
 ```
 
 `NYMObjects` conform to the `MKAnnotation` protocol meaning you can add them to a `MKMapView` very easily. 
+
+## Developing
+
+1. Clone repository.
+1. Create a feature branch off `master`
+1. Write tests. We use Kiwi/Nocilla.
+1. Develop feature to satisfy tests.
+1. Submit pull request.
+1. ...
+1. Profit!
