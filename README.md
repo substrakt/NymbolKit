@@ -17,7 +17,7 @@ pod 'NymbolKit'
 
 **Before doing anything** you must set your API key.
 
-```
+```objectivec
 [NymbolKit initializeSessionWithKey:@"abcd" secretKey:@"abcd"];
 ```
 
