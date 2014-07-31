@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.prefix_header_file = "NymbolKit/Supporting Files/NymbolKit-Prefix.pch"
 # Source Info
   s.platform     =  :ios, '7.0'
-  s.source_files = 'NymbolKit', 'NymbolKit/**'
+  s.source_files = 'NymbolKit', 'NymbolKit/**', 'NymbolKit/Models/**/*.{h,m}'
 
   s.requires_arc = true
   s.framework    = 'CoreLocation'
