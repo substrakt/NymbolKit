@@ -20,9 +20,9 @@ describe(@"Fetchng a single collection by UID", ^{
     context(@"with valid credentials", ^{
         
         beforeEach(^{
-            [NymbolKit initializeSessionWithKey:@"NsgWPgQ5RXVh67NjX2" secretKey:@"J4zakHEFs89yeE29WeR6KbJZncuLtXZP"];
+            [NymbolKit initializeSessionWithKey:@"NsgWPgQ5RXVh67NjX2" secretKey:@"J4zakHEFs89yeE29WeR6KbJZncuLtXZP" appIdentifier:@"com.example.example"];
             stubRequest(@"GET", @"http://nymbol.co.uk/api/manager/collection/8E91.json").
-            withHeaders(@{ @"Authorization": [NymbolKit authHeaderKey] }).
+            withHeaders(@{ @"Authorization": [NymbolKit authHeaderKeyForAppIdentifier:@"com.example.example"] }).
             andReturn(200).
             withHeaders(@{@"Content-Type": @"application/json"}).
             withBody(@"{\"id\": 43, \"name\": \"Game of Thrones Characters\", \"uid\": \"8E91\"}");
@@ -79,9 +79,9 @@ describe(@"Fetching all collections", ^{
    
     context(@"with valid credentials", ^{
         beforeEach(^{
-            [NymbolKit initializeSessionWithKey:@"NsgWPgQ5RXVh67NjX2" secretKey:@"J4zakHEFs89yeE29WeR6KbJZncuLtXZP"];
+            [NymbolKit initializeSessionWithKey:@"NsgWPgQ5RXVh67NjX2" secretKey:@"J4zakHEFs89yeE29WeR6KbJZncuLtXZP" appIdentifier:@"com.example.example"];
             stubRequest(@"GET", @"http://nymbol.co.uk/api/manager/collection.json").
-            withHeaders(@{ @"Authorization": [NymbolKit authHeaderKey] }).
+            withHeaders(@{ @"Authorization": [NymbolKit authHeaderKeyForAppIdentifier:@"com.example.example"] }).
             andReturn(200).
             withHeaders(@{@"Content-Type": @"application/json"}).
             withBody(@"[{\"id\": 43, \"name\": \"Game of Thrones Characters\", \"uid\": \"8E91\", \"location\": \"Steve\"}]");

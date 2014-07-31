@@ -19,7 +19,7 @@
  *  @param key       The key from your Nymbol dashboard
  *  @param secretKey The secret key from your Nymbol dashboard
  */
-+ (void)initializeSessionWithKey:(NSString *)key secretKey:(NSString *)secretKey;
++ (void)initializeSessionWithKey:(NSString *)key secretKey:(NSString *)secretKey appIdentifier:(NSString *)identifier;
 
 
 /**
@@ -27,21 +27,21 @@
  *
  *  @return The API key
  */
-+ (NSString *)currentKey;
++ (NSString *)currentKeyForAppIdentifier:(NSString *)identifier;
 
 /**
  *  Returns the currently used secret
  *
  *  @return The current secret API key
  */
-+ (NSString *)currentSecret;
++ (NSString *)currentSecretForAppIdentifier:(NSString *)identifier;
 
 /**
  *  Returns the authorization key to use in the request headers
  *
  *  @return The MD5 string required for authorization
  */
-+ (NSString *)authHeaderKey;
++ (NSString *)authHeaderKeyForAppIdentifier:(NSString *)identifier;
 
 + (NSURLRequest *)baseRequestWithEndpoint:(NSString *)endpoint;
 + (NSURLRequest *)customBaseRequestWithEndpoint:(NSString *)endpoint;
