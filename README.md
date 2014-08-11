@@ -6,7 +6,7 @@ Objective-C wrapper around the Nymbol API.
 
 Just use CocoaPods:
 
-```objective-c
+```ruby
 # Podfile
 pod 'NymbolKit'
 ```
