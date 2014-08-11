@@ -6,7 +6,7 @@ Objective-C wrapper around the Nymbol API.
 
 Just use CocoaPods:
 
-```
+```objective-c
 # Podfile
 pod 'NymbolKit'
 ```
@@ -17,7 +17,7 @@ pod 'NymbolKit'
 
 **Before doing anything** you must set your API key.
 
-```objectivec
+```objective-c
 [NymbolKit initializeSessionWithKey:@"abcd" secretKey:@"abcd"];
 ```
 
@@ -25,7 +25,7 @@ pod 'NymbolKit'
 
 Fetch all collections:
 
-```objectivec
+```objective-c
 [NYMCollection allCollectionsWithBlock:^(NSArray *collections, NSError *error) {
     if(!error) {
         // collections will be an array of NYMCollection objects
@@ -35,7 +35,7 @@ Fetch all collections:
 
 Fetch a single collection:
 
-```objectivec
+```objective-c
 NYMCollection __block *parentCollection;
 [NYMCollection collectionWithUID:4 block:^(NYMCollection *collection, NSError *error) {
     if(!error) {
@@ -49,7 +49,7 @@ NYMCollection __block *parentCollection;
 
 Fetch all objects belonging to a collection. Note that you don't need to fetch the collection first, just create one with the correct pk. (`pk` stands for primary key and maps to the object `id`. `id` is a protected word in Objective-C so we can't use it here.)
 
-```objectivec
+```objective-c
 NYMCollection *collection = [NYMCollection new];
 collection.pk = @"4";
 [NYMObject allObjectsForCollection:collection WithBlock:^(NSArray *objects, NSError *error){
@@ -60,7 +60,7 @@ collection.pk = @"4";
 
 Fetch all data for an object:
 
-```objectivec
+```objective-c
 NYMCollection *collection = [NYMCollection new];
 collection.pk = @"4";
 [NYMObject allObjectsForCollection:collection WithBlock:^(NSArray *objects, NSError *error){
