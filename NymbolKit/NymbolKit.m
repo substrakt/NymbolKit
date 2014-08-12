@@ -94,7 +94,7 @@
 + (NSURLRequest *)customBaseRequestWithEndpoint:(NSString *)endpoint
 {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:endpoint]];
-    [request setValue:[NymbolKit authHeaderKeyForAppIdentifier:@"com.example.example"] forHTTPHeaderField:@"Authorization"];
+    [request setValue:[NymbolKit authHeaderKeyForAppIdentifier:[[NSUserDefaults standardUserDefaults] valueForKey:@"nymbol_identifier"]] forHTTPHeaderField:@"Authorization"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [request setValue:[NSString stringWithFormat:@"%@", [UIDevice currentDevice].identifierForVendor] forHTTPHeaderField:@"X-Device"];
     [request setValue:@"ios" forHTTPHeaderField:@"X-Platform"];
