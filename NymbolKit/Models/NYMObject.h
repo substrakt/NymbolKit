@@ -35,6 +35,7 @@
 @property (nonatomic) BOOL dataIsLoaded;
 
 + (void)allObjectsForCollection:(NYMCollection *)collection WithBlock:(void (^)(NSArray *objects, NSError *error))block;
++ (void)objectWithPk:(NSString *)primaryKey inCollection:(NYMCollection *)collection WithBlock:(void (^)(NYMObject *object, NSError *error))block;
 
 - (void)fetchDataWithBlock:(void (^)(BOOL succeeded, NSError *error, NYMObject *object))block;
 - (void)fetchResourcesWithBlock:(void (^)(BOOL succeeded, NSError *error, NSArray *resources))block;

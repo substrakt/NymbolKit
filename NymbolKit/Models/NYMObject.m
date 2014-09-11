@@ -37,6 +37,27 @@
     });
 }
 
++ (void)objectWithPk:(NSString *)primaryKey inCollection:(NYMCollection *)collection WithBlock:(void (^)(NYMObject *, NSError *))block {
+    dispatch_queue_t queue = dispatch_queue_create("nymbolkit_singleObjectCollection", nil);
+    dispatch_async(queue, ^{
+        NSURLRequest *request = [NymbolKit customBaseRequestWithEndpoint:[NSString stringWithFormat:@"http://nymbol.co.uk/api/manager/collection/%@/assets/%@.json", collection.pk, primaryKey]];
+        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+        operation.responseSerializer = [AFJSONResponseSerializer serializer];
+        
+        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NYMObject *newObject = [NYMObject new];
+            newObject.name = responseObject[@"name"];
+            newObject.pk = [responseObject[@"id"] stringValue];
+            newObject.dataIsLoaded = NO;
+            newObject.collection = collection;
+            block(newObject, nil);
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            block(nil, error);
+        }];
+        [operation start];
+    });
+}
+
 - (void)fetchDataWithBlock:(void (^)(BOOL, NSError *, NYMObject *))block
 {
     if (_dataIsLoaded) {
