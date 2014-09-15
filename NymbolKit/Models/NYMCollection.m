@@ -72,7 +72,7 @@
                     newObject.status = (int)object[@"status"];
                     newObject.location = CLLocationCoordinate2DMake([object[@"latitude"] doubleValue], [object[@"longitude"] doubleValue]);
                     newObject.thumbnailPath = object[@"thumbnail"];
-                    newObject.description = object[@"description"];
+                    newObject.itemDescription = object[@"description"];
                     newObject.collection = self;
                     [assets addObject:newObject];
                 }
