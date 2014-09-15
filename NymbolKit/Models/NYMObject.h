@@ -24,7 +24,7 @@
 @property (nonatomic) int curator;
 @property (nonatomic, retain) NSArray *resources;
 @property (nonatomic) CLLocationCoordinate2D location;
-@property (nonatomic, retain) NSString *description;
+@property (nonatomic, retain) NSString *itemDescription;
 @property (nonatomic, retain) NSString *thumbnailPath;
 @property (nonatomic, retain) NSURL *shareUrl;
 @property (nonatomic, retain) NSMutableArray /*<NYMTag *>*/ *tags;

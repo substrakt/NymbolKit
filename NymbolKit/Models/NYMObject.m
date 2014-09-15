@@ -78,7 +78,7 @@
                     _location = CLLocationCoordinate2DMake([responseObject[@"latitude"] doubleValue], [responseObject[@"longitude"] doubleValue]);
                 }
                 
-                _description = responseObject[@"description"];
+                _itemDescription = responseObject[@"description"];
                 _dataIsLoaded = YES;
                 _shareUrl = [NSURL URLWithString:responseObject[@"share_url"]];
                 for (NSString *tag in responseObject[@"tags"]) {
